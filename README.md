@@ -1,1 +1,1 @@
-# Taste
+window.location.href = "index.html";
