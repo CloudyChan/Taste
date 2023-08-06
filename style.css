@@ -55,13 +55,19 @@ header {
   padding: 18px 100px;
   box-shadow: 0 0.5rem 50rem rgba(0, 0, 0, 0.1);
 }
+
+img {
+  user-select: none;
+}
 .logo {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--main-color);
+  user-select: none;
 }
 .navbar {
   display: flex;
+  user-select: none;
 }
 .navbar a {
   font-size: 1rem;
@@ -102,6 +108,7 @@ header {
   padding: 10px 20px;
   border-radius: 0.5rem;
   color: #fff;
+  user-select: none;
 }
 .btn:hover {
   background: #ffa400;
@@ -184,11 +191,12 @@ header {
   background: var(--main-color);
   border-radius: 0 0.5rem 0 0.5rem;
   padding: 5px 8px;
+  cursor: pointer;
 }
 .box .bx:hover {
   background: #ffa400;
 }
-.servives-container {
+.services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, auto));
   gap: 1.5rem;
