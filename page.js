@@ -1,3 +1,5 @@
+// Links
+let contactLink = "https://docs.google.com/forms/d/e/1FAIpQLSexRbpw3hIfdaCZe9JWMjwSAq0QHHC_CXV7GJ9_PchbVAahUA/viewform?usp=sf_link"
 // Navbar
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -39,3 +41,7 @@ sr.reveal(`.home-text, .home-img,
             .contact-box`, {
     interval: 200
 })
+
+function openContactForm() {
+    window.open(contactLink);
+}
