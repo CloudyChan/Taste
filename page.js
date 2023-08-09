@@ -14,15 +14,27 @@ window.onscroll = () => {
 }
 // Dark Mode
 let darkmode = document.querySelector('#darkmode');
+let getMode = localStorage.getItem("mode");
+
+function toggleLight() {
+  if(getMode == "light"){
+    darkmode.classList.replace('bx-moon','bx-sun');
+    document.body.classList.add('active');
+    localStorage.setItem("mode", "dark");
+}else{
+    darkmode.classList.replace('bx-sun','bx-moon');
+    document.body.classList.remove('active');
+    localStorage.setItem("mode", "light");
+}
+getMode = localStorage.getItem("mode")
+console.log(getMode)
+}
+
+toggleLight()
+toggleLight()
 
 darkmode.onclick = () => {
-    if(darkmode.classList.contains('bx-moon')){
-        darkmode.classList.replace('bx-moon','bx-sun');
-        document.body.classList.add('active');
-    }else{
-        darkmode.classList.replace('bx-sun','bx-moon');
-        document.body.classList.remove('active');
-    }
+  toggleLight()
 }
 
 // Scroll Reveal
@@ -75,4 +87,4 @@ window.addEventListener('keydown', function(e) {
     if(e.keyCode == 32 && e.target == document.body) {
       e.preventDefault();
     }
-});
+})
